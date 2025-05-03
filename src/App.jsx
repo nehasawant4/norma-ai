@@ -1,5 +1,5 @@
 import UploadFDADoc from './components/UploadFDADoc';
-import QueryFDA from './components/queryFDA';
+import QueryFDA from './components/QueryFDA';
 
 function App() {
   return (

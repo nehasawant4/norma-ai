@@ -269,7 +269,7 @@ function QueryFDA() {
       formData.append("file", file);
       formData.append("question", question);
 
-      const res = await axios.post("http://localhost:5050/query_compare", formData, {
+      const res = await axios.post("https://norma-ai.onrender.com/query_compare", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

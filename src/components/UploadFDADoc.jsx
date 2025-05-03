@@ -17,7 +17,7 @@ function UploadFDADoc() {
       setStatus('Uploading document...');
       setStatusType('loading');
       
-      const res = await axios.post('http://localhost:3001/upload-fda', formData);
+      const res = await axios.post('https://norma-node.onrender.com/upload-fda', formData);
       
       setStatus(res.data.message);
       setStatusType('success');

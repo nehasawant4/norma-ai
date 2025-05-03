@@ -298,10 +298,10 @@ function QueryFDA() {
       const fileData = new FormData();
       fileData.append('file', file);
 
-      const textRes = await axios.post('http://localhost:3001/extract-pdf-text', fileData);
+      const textRes = await axios.post('https://norma-node.onrender.com/extract-pdf-text', fileData);
       const extractedText = textRes.data.text;
 
-      const suggestionRes = await axios.post('http://localhost:3001/generate-suggestions', {
+      const suggestionRes = await axios.post('https://norma-node.onrender.com/generate-suggestions', {
         paragraphs: extractedText.split('\n\n').filter(p => p.trim().length > 0),
         complianceNotes: parsedAnswers.map((item) => item.fda_requirement_summary || ''),
       });

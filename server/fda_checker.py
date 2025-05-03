@@ -320,7 +320,7 @@ def upload_pdf_to_backend(pdf_path):
     Upload the given PDF file to the Node.js backend's /upload-fda endpoint.
     """
     import mimetypes
-    backend_url = 'http://localhost:3001/upload-fda'
+    backend_url = 'https://norma-node.onrender.com/upload-fda'
     try:
         with open(pdf_path, 'rb') as f:
             files = {
